@@ -7,7 +7,7 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(starter-kit starter-kit-ruby color-theme haml-mode)
+(defvar my-packages '(starter-kit starter-kit-ruby color-theme haml-mode yaml-mode)
   "A list of packages to ensure are installed at launch")
 
 (dolist (p my-packages)
@@ -46,3 +46,7 @@ scroll-preserve-screen-position t); без этого не будет норма
 ;; Rinary
 (add-to-list 'load-path "~/.emacs.d/rinari")
 (require 'rinari)
+
+;; YAML mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
