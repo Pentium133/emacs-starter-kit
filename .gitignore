@@ -2,3 +2,9 @@
 .DS_Store
 starter-kit-2.*
 *.tar
+elpa
+backups
+places
+/.smex-items
+auto-save-list
+/bookmarks
