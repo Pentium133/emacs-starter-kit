@@ -7,7 +7,7 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(starter-kit starter-kit-ruby)
+(defvar my-packages '(starter-kit starter-kit-ruby color-theme haml-mode)
   "A list of packages to ensure are installed at launch")
 
 (dolist (p my-packages)
@@ -42,3 +42,7 @@ scroll-preserve-screen-position t); без этого не будет норма
 
 (global-set-key [f9] 'bookmark-bmenu-list)
 (global-set-key "\C-z" 'undo)
+
+;; Rinary
+(add-to-list 'load-path "~/.emacs.d/rinari")
+(require 'rinari)
