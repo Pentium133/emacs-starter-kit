@@ -7,7 +7,7 @@
   (package-refresh-contents))
 
 ;; Add in your own as you wish:
-(defvar my-packages '(starter-kit starter-kit-ruby color-theme haml-mode yaml-mode)
+(defvar my-packages '(starter-kit starter-kit-ruby starter-kit-bindings color-theme haml-mode yaml-mode markdown-mode)
   "A list of packages to ensure are installed at launch")
 
 (dolist (p my-packages)
@@ -50,3 +50,19 @@ scroll-preserve-screen-position t); без этого не будет норма
 ;; YAML mode
 (require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+
+;; copy line
+(global-set-key "\C-d" "\C-a\C- \C-n\M-w\C-y")
+
+;; markdown mode
+(require 'markdown-mode)
+(add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
+
+;; C-c n cleanup whitespace
+(global-whitespace-mode t)
+(setq whitespace-line-column 120)
+
+;; Prefer backward-kill-word over Backspace
+(global-set-key "\C-w" 'backward-kill-word)
+(global-set-key "\C-x\C-k" 'kill-region)
+(global-set-key "\C-c\C-k" 'kill-region)
