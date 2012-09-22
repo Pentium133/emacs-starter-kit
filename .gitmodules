@@ -1,3 +1,6 @@
 [submodule "rinari"]
 	path = rinari
 	url = git://github.com/eschulte/rinari.git
+[submodule "vendors/themes/solarized"]
+	path = vendors/themes/solarized
+	url = https://github.com/sellout/emacs-color-theme-solarized.git

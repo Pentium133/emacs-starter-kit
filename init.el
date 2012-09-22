@@ -30,8 +30,13 @@ scroll-preserve-screen-position t); без этого не будет норма
 
 ;; copy and paste
 (custom-set-variables
-'(interprogram-paste-function (quote x-cut-buffer-or-selection-value) t)
-'(x-select-enable-clipboard t))
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(interprogram-paste-function (quote x-cut-buffer-or-selection-value) t)
+ '(org-agenda-files (quote ("~/project/ror/fast_tickets/todo.org")))
+ '(x-select-enable-clipboard t))
 
 (windmove-default-keybindings 'meta)
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -70,3 +75,13 @@ scroll-preserve-screen-position t); без этого не будет норма
 (global-set-key "\C-w" 'backward-kill-word)
 (global-set-key "\C-x\C-k" 'kill-region)
 (global-set-key "\C-c\C-k" 'kill-region)
+
+;; add theme
+(add-to-list 'load-path "~/.emacs.d/vendors/themes/solarized")
+(require 'solarized-dark-theme)
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
