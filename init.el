@@ -43,9 +43,13 @@ scroll-preserve-screen-position t); без этого не будет норма
 (global-set-key [f9] 'bookmark-bmenu-list)
 (global-set-key "\C-z" 'undo)
 
+
 ;; Rinary
 (add-to-list 'load-path "~/.emacs.d/rinari")
 (require 'rinari)
+(global-set-key (kbd "C-c m") 'rinari-find-model)
+(global-set-key (kbd "C-c c") 'rinari-find-conreoller)
+(global-set-key (kbd "C-c v") 'rinari-find-view)
 
 ;; YAML mode
 (require 'yaml-mode)
